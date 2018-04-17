@@ -7,25 +7,12 @@ function AirPort() {
 };
 AirPort.prototype.land = function(plane) {
   if (this.stormy() === true)
-    throw new Error(["It is Stormy!"])
-  else
-  plane.land()
-  this.hanger.push(plane);
-};
-AirPort.prototype.takeoff = function(plane) {
-  if (this.stormy() === true)
-    throw new Error(["It is Stormy!"])
-  else
-  plane.takeoff()
-  var planePosition = this.hanger.indexOf(plane)
-  this.hanger.splice(planePosition, 1);
-    throw new Error("the weather is stormy, cant land")
+    throw new Error(["the weather is stormy, cant land"])
   else if (this.full() === true)
     throw new Error("airport is full, cant land")
   else
-    plane.land()
-    this.hanger.push(plane);
-
+  plane.land()
+  this.hanger.push(plane);
 };
 AirPort.prototype.takeoff = function(plane) {
   if (this.stormy() === true)
