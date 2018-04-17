@@ -9,4 +9,7 @@ describe('AirPort', function(){
     airport.takeoff(plane);
     expect(airport.hanger).not.toContain(plane)
   })
+  it('has a weather', function(){
+    expect(airport.weather).toContain('fine' || 'stormy')
+  })
 })
