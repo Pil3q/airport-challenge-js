@@ -13,3 +13,9 @@ AirPort.prototype.takeoff = function(plane) {
   var planePosition = this.hanger.indexOf(plane)
   this.hanger.splice(planePosition, 1);
 };
+AirPort.prototype.stormy = function() {
+  if (this.weather === 'stormy')
+    return true
+  else
+    return false
+};

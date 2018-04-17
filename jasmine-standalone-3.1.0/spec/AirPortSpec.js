@@ -12,4 +12,11 @@ describe('AirPort', function(){
   it('has a weather', function(){
     expect(airport.weather).toContain('fine' || 'stormy')
   })
+  it('hrespond to stormy with random  true/false', function(){
+    var result = []
+    for (var i = 0; i <= 20; i++) {
+    result.push(airport.stormy())
+    }
+    expect(result).toContain(true && false)
+  })
 })
